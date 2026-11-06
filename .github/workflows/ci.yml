@@ -1,0 +1,63 @@
+name: DFX Forensics CI Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  backend-audit:
+    name: Backend Regression & Forensic Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r backend/requirements.txt
+
+      - name: Verify Forensic PDF & Core Imports
+        run: |
+          cd backend
+          python test_pdf_generator_direct.py
+
+  frontend-build:
+    name: Frontend TypeScript & Bundle Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: frontend/frontend/package-lock.json
+
+      - name: Install Frontend Dependencies
+        run: |
+          cd frontend/frontend
+          npm ci
+
+      - name: TypeScript Type Checking
+        run: |
+          cd frontend/frontend
+          npx tsc --noEmit
+
+      - name: Webpack Production Build
+        run: |
+          cd frontend/frontend
+          npm run build
+

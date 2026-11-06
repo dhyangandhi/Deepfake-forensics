@@ -1,0 +1,1 @@
+from app.services.face_detector import detect_faces

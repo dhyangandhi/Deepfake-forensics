@@ -1,0 +1,42 @@
+# Environments & Virtualenvs
+backend/ai-env/
+ai-env/
+venv/
+.venv/
+env/
+
+# Python Caches & Compiled Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Node.js & Next.js
+node_modules/
+frontend/frontend/node_modules/
+.next/
+frontend/frontend/.next/
+out/
+build/
+dist/
+
+# Uploaded Artifacts & Cache
+uploads/*
+!uploads/.gitkeep
+backend/uploads/*
+!backend/uploads/.gitkeep
+!backend/uploads/video_frames/.gitkeep
+!backend/uploads/audio_spectrograms/.gitkeep
+
+# Temporary files & OS files
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+next-panic*.log
+
+# Hugging Face & Matplotlib caches
+.cache/
+.matplotlib/
+

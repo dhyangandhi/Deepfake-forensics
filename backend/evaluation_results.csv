@@ -1,0 +1,4 @@
+image,actual,face_id,predicted,confidence,real_score,fake_score,status
+C:\Users\admin\Pictures\deepfake-forensics\backend\dataset\real\WIN_20261104_14_03_36_Pro.jpg,REAL,1,REAL,99.37,99.37,0.63,SUCCESS
+C:\Users\admin\Pictures\deepfake-forensics\backend\dataset\real\WIN_20261104_16_56_02_Pro.jpg,REAL,1,REAL,100.0,100.0,0.0,SUCCESS
+C:\Users\admin\Pictures\deepfake-forensics\backend\dataset\fake\random-person.jpeg,FAKE,1,REAL,80.6,80.6,19.4,SUCCESS

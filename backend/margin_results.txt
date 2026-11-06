@@ -1,0 +1,32 @@
+
+--- Testing Margin & Aspect Ratio Variations ---
+
+Target: WIN_20261104_14_03_36_Pro.jpg
+  Full Image (no crop): Real=99.9% | Fake=0.1%
+  Face Box: x=620, y=367, w=191, h=250
+  Margin   0% (191x250): Real=  8.91% | Fake= 91.09%
+  Margin  20% (267x350): Real= 17.28% | Fake= 82.72%
+  Margin  40% (343x450): Real=  0.50% | Fake= 99.50%
+  Margin  60% (419x503): Real= 99.86% | Fake=  0.14%
+  Margin  80% (495x553): Real= 99.91% | Fake=  0.09%
+  Margin 100% (573x603): Real= 99.93% | Fake=  0.07%
+
+Target: WIN_20261104_16_56_02_Pro.jpg
+  Full Image (no crop): Real=99.73% | Fake=0.27%
+  Face Box: x=584, y=557, w=150, h=163
+  Margin   0% (150x163): Real=  0.41% | Fake= 99.59%
+  Margin  20% (210x195): Real=  0.40% | Fake= 99.60%
+  Margin  40% (270x228): Real=  4.35% | Fake= 95.65%
+  Margin  60% (330x260): Real= 98.81% | Fake=  1.19%
+  Margin  80% (390x293): Real= 99.71% | Fake=  0.29%
+  Margin 100% (450x326): Real= 99.71% | Fake=  0.29%
+
+Target: random-person.jpeg
+  Full Image (no crop): Real=2.3% | Fake=97.7%
+  Face Box: x=204, y=194, w=545, h=555
+  Margin   0% (545x555): Real= 37.48% | Fake= 62.52%
+  Margin  20% (763x777): Real=  3.56% | Fake= 96.44%
+  Margin  40% (967x971): Real=  3.78% | Fake= 96.22%
+  Margin  60% (1024x1024): Real=  2.30% | Fake= 97.70%
+  Margin  80% (1024x1024): Real=  2.30% | Fake= 97.70%
+  Margin 100% (1024x1024): Real=  2.30% | Fake= 97.70%
